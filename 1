@@ -1,0 +1,38 @@
+
+- name: ----------- create project yml ------------
+  file:
+    path: "{{ansible_root}}/{{project_name"
+    state: touch
+  tags: [crate_prj_yml]
+
+- name: -------- create project roles ---------
+  file:
+    path: "{{ansible_root}}/rolse/{{project_name}}"
+    state: directory
+  tags: [create_rolse]
+
+- name: --------- create 7 directory ----------
+  file: 
+    path: "{{ansible_root}}/roles/{{project_name}}/{{item}}"
+    state: directory
+  loop:
+    - tasks
+    - vars
+    - templates
+    - handlers
+    - files
+    - defualts
+    - meta
+  tags: [seven_dir]
+
+- name: ----------- create main.yml files ------------
+  file:
+    path: "{{ansible_root}}/roles/{{project_name}}/{{item}}/main.yml"
+    state: touch
+  loop:
+    - tasks
+    - vars
+    - defualts
+    - handlers
+    - meta
+  tags: [create_main_yml]

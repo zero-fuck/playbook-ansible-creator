@@ -1,0 +1,6 @@
+
+- host: myservers
+
+  roles: 
+      - myproject
+
