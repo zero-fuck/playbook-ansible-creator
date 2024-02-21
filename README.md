@@ -10,7 +10,7 @@ sudo apt install ansible
 
 ```
 
-#Now you can install your local playbook:
+# Now you can install your local playbook:
 
 ```
 ansible-playbook  -i inventory/hosts   myproject.yml
