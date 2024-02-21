@@ -1,5 +1,5 @@
 
-- host: myservers
+- hosts: localhost
 
   roles: 
       - myproject
