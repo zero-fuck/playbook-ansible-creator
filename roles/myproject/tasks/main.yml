@@ -7,13 +7,13 @@
 
 - name: -------- create project roles ---------
   file:
-    path: "{{ansible_root}}/rolse/{{project_name}}"
+    path: "{{ansible_root}}/{{project_name}}"
     state: directory
   tags: [create_rolse]
 
 - name: --------- create 7 directory ----------
   file: 
-    path: "{{ansible_root}}/roles/{{project_name}}/{{item}}"
+    path: "{{ansible_root}}/{{project_name}}/roles/{{item}}"
     state: directory
   loop:
     - tasks
@@ -27,7 +27,7 @@
 
 - name: ----------- create main.yml files ------------
   file:
-    path: "{{ansible_root}}/roles/{{project_name}}/{{item}}/main.yml"
+    path: "{{ansible_root}}/{{project_name}}/roles/{{item}}/main.yml"
     state: touch
   loop:
     - tasks
