@@ -7,7 +7,7 @@
 
 - name: ----------- create project yml ------------
   file:
-    path: "{{ansible_root}}/{{project_name}}.yml"
+    path: "{{ansible_root}}/{{project_name}}/{{project_name}}.yml"
     state: touch
   tags: [crate_prj_yml]
 
