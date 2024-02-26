@@ -7,7 +7,7 @@
 
 - name: -------- create project roles ---------
   file:
-    path: "{{ansible_root}}/{{project_name}}"
+    path: "{{ansible_root}}/{{project_name}}/roles"
     state: directory
   tags: [create_rolse]
 
