@@ -1,15 +1,19 @@
+- name: -------- create project roles ---------
+  file:
+    path: "{{ansible_root}}/{{project_name}}/"
+    state: directory
+  tags: [create_rolse]
 
 - name: ----------- create project yml ------------
   file:
     path: "{{ansible_root}}/{{project_name}}.yml"
     state: touch
   tags: [crate_prj_yml]
-
-- name: -------- create project roles ---------
+- name: ----------- create hosts yml ------------
   file:
-    path: "{{ansible_root}}/{{project_name}}/"
-    state: directory
-  tags: [create_rolse]
+    path: "{{ansible_root}}/{{project_name}}/hosts"
+    state: touch
+  tags: [crate_prj_yml]
 
 - name: --------- create 7 directory ----------
   file: 
