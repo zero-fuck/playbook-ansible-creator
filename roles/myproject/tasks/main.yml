@@ -27,7 +27,7 @@
 
 - name: ----------- create main.yml files ------------
   file:
-    path: "{{ansible_root}}/{{project_name}}/roles/{{item}}/main.yml"
+    path: "{{ansible_root}}/{{project_name}}/roles/{{project_name}}/{{item}}/main.yml"
     state: touch
   loop:
     - tasks
