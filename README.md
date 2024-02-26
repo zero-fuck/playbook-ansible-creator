@@ -31,4 +31,11 @@ or
   ip 1 remot ssh
   ip 2 rempt ssh
 ```
+
+# run play book 
+
+
+```
+ansible-playbook  -i inventory/anisahost  myproject.yml
+```
  
