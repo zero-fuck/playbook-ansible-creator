@@ -18,8 +18,8 @@ ansible-playbook  -i inventory/hosts   myproject.yml
 # create file myproject.yml and edit file yml :
 ```
 - hosts: localhost
-#or
-#- hosts: myserver
+or
+- hosts: myserver
 
   roles: 
       - myproject
